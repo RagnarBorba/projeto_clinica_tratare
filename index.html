@@ -358,17 +358,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="text-center mb-16">
-                <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 italic animate-fade-in">
+                <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 animate-fade-in">
                     Transformações Reais</h2>
                 <h3 class="text-4xl md:text-5xl font-title leading-tight">A arte de recriar <br><span
-                        class="text-primaria">sorrisos memoráveis</span></h3>
+                        class="text-primaria italic">sorrisos memoráveis</span></h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-6 gap-12">
 
 
-                <!-- Antes e depois primeiro bloco - Resultados -->
-                <div class="space-y-4">
+                <!-- Antes e depois primeiro bloco - Resultados 1 -->
+                <div class="lg:col-span-2 space-y-4">
                     <div
                         class="relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border border-white/10 bg-[#1a1a1a]">
 
@@ -395,7 +395,7 @@
                             </div>
                         </div>
 
-                        <input type="range" min="0" max="100" value="50"
+                        <label></label><input type="range" min="0" max="100" value="50"
                             class="absolute inset-0 w-full h-full appearance-none bg-transparent cursor-col-resize z-20 slider-input"
                             oninput="moveSlider(this)">
 
@@ -404,13 +404,13 @@
                         <span
                             class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
                     </div>
-                    <h4 class="text-lg font-title font-bold text-primaria italic">Faceta em Resina:</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Harmonia imediata e naturalidade para transformar o
+                    <h4 class="text-lg font-title text-primaria">Faceta em Resina</h4>
+                    <p class="text-white text-sm leading-relaxed">Harmonia imediata e naturalidade para transformar o
                         formato e a cor do sorriso.</p>
                 </div>
 
-                <!-- Antes e depois segundo bloco - Resultados -->
-                <div class="space-y-4">
+                <!-- Antes e depois segundo bloco - Resultados 2 -->
+                <div class="lg:col-span-2 space-y-4">
                     <div
                         class="relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border border-white/10 bg-[#1a1a1a]">
 
@@ -446,14 +446,14 @@
                         <span
                             class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
                     </div>
-                    <h4 class="text-lg font-title font-bold text-primaria italic">Implante Dentário</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">A base sólida e segura para recuperar a liberdade
+                    <h4 class="text-lg font-title text-primaria">Implante Dentário</h4>
+                    <p class="text-white text-sm leading-relaxed">A base sólida e segura para recuperar a liberdade
                         de mastigar e a vontade de sorrir.
                     </p>
                 </div>
 
-                <!-- Antes e depois terceiro bloco - Resultados -->
-                <div class="space-y-4">
+                <!-- Antes e depois terceiro bloco - Resultados 3 -->
+                <div class="lg:col-span-2 space-y-4">
                     <div
                         class="relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border border-white/10 bg-[#1a1a1a]">
 
@@ -489,58 +489,101 @@
                         <span
                             class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
                     </div>
-                    <h4 class="text-lg font-title font-bold text-primaria italic">Invisalign</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">O alinhamento perfeito dos dentes com a máxima
+                    <h4 class="text-lg font-title text-primaria">Invisalign</h4>
+                    <p class="text-white text-sm leading-relaxed">O alinhamento perfeito dos dentes com a máxima
                         discrição e tecnologia da ortodontia invisível.
                     </p>
                 </div>
 
-                <!-- Antes e depois quarto bloco - Resultados -->
-                <div class="space-y-4">
+                <!-- Antes e depois quarto bloco - Resultados 4 -->
+                <div class="md:col-span-2 lg:col-span-2 lg:col-start-2 space-y-4"">
                     <div
-                        class="relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border border-white/10 bg-[#1a1a1a]">
+                        class=" relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border
+                    border-white/10 bg-[#1a1a1a]">
 
-                        <img src="img/Prótese Protocolo - antes.webp"
-                            class="absolute inset-0 w-full h-full object-cover" alt="Antes">
+                    <img src="img/Prótese Protocolo - antes.webp" class="absolute inset-0 w-full h-full object-cover"
+                        alt="Antes">
 
-                        <div class="absolute inset-0 overflow-hidden after-img pointer-events-none shadow-[2px_0_10px_rgba(0,0,0,0.3)]"
-                            style="width: 50%;">
-                            <div class="absolute inset-0 w-[calc(100%)] h-full">
-                                <img src="img/Prótese Protocolo - depois.webp"
-                                    class="absolute inset-0 w-full h-full object-cover origin-left"
-                                    style="width: calc(100% / 0.5); max-width: none;" id="after-image-element"
-                                    alt="Depois">
-                            </div>
+                    <div class="absolute inset-0 overflow-hidden after-img pointer-events-none shadow-[2px_0_10px_rgba(0,0,0,0.3)]"
+                        style="width: 50%;">
+                        <div class="absolute inset-0 w-[calc(100%)] h-full">
+                            <img src="img/Prótese Protocolo - depois.webp"
+                                class="absolute inset-0 w-full h-full object-cover origin-left"
+                                style="width: calc(100% / 0.5); max-width: none;" id="after-image-element" alt="Depois">
                         </div>
-
-                        <div class="absolute inset-y-0 pointer-events-none slider-line"
-                            style="left: 50%; transform: translateX(-50%);">
-                            <div class="w-[2px] h-full bg-primaria shadow-[0_0_15px_rgba(197,160,89,0.8)]"></div>
-
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primaria rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(197,160,89,0.6)] border-2 border-white/30 glow-handle">
-                                <i data-lucide="chevrons-left-right" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-
-                        <input type="range" min="0" max="100" value="50"
-                            class="absolute inset-0 w-full h-full appearance-none bg-transparent cursor-col-resize z-20 slider-input"
-                            oninput="moveSlider(this)">
-
-                        <span
-                            class="absolute bottom-4 left-4 bg-escuro/70 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none border border-white/10">Antes</span>
-                        <span
-                            class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
                     </div>
-                    <h4 class="text-lg font-title font-bold text-primaria italic">Prótese Protocolo</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Reabilitação oral completa e fixa para devolver a
-                        firmeza, a estética e a autoconfiança total.
-                    </p>
-                </div>
 
+                    <div class="absolute inset-y-0 pointer-events-none slider-line"
+                        style="left: 50%; transform: translateX(-50%);">
+                        <div class="w-[2px] h-full bg-primaria shadow-[0_0_15px_rgba(197,160,89,0.8)]"></div>
+
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primaria rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(197,160,89,0.6)] border-2 border-white/30 glow-handle">
+                            <i data-lucide="chevrons-left-right" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50"
+                        class="absolute inset-0 w-full h-full appearance-none bg-transparent cursor-col-resize z-20 slider-input"
+                        oninput="moveSlider(this)">
+
+                    <span
+                        class="absolute bottom-4 left-4 bg-escuro/70 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none border border-white/10">Antes</span>
+                    <span
+                        class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
+                </div>
+                <h4 class="text-lg font-title text-primaria">Prótese Protocolo</h4>
+                <p class="text-white text-sm leading-relaxed">Reabilitação oral completa e fixa para devolver a
+                    firmeza, a estética e a autoconfiança total.
+                </p>
             </div>
+
+            <!-- Antes e depois quinto bloco - Resultados 5 -->
+            <div class="md:col-span-2 lg:col-span-2 space-y-4">
+                <div
+                    class="relative w-full aspect-video overflow-hidden rounded-lg shadow-2xl group border border-white/10 bg-[#1a1a1a]">
+
+                    <img src="img/Prótese Sobre Implantes - Protocolo (antes).webp"
+                        class="absolute inset-0 w-full h-full object-cover" alt="Antes">
+
+                    <div class="absolute inset-0 overflow-hidden after-img pointer-events-none shadow-[2px_0_10px_rgba(0,0,0,0.3)]"
+                        style="width: 50%;">
+                        <div class="absolute inset-0 w-[calc(100%)] h-full">
+                            <img src="img/Prótese Sobre Implantes - Protocolo (depois).webp"
+                                class="absolute inset-0 w-full h-full object-cover origin-left"
+                                style="width: calc(100% / 0.5); max-width: none;" id="after-image-element" alt="Depois">
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-y-0 pointer-events-none slider-line"
+                        style="left: 50%; transform: translateX(-50%);">
+                        <div class="w-[2px] h-full bg-primaria shadow-[0_0_15px_rgba(197,160,89,0.8)]"></div>
+
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primaria rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(197,160,89,0.6)] border-2 border-white/30 glow-handle">
+                            <i data-lucide="chevrons-left-right" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50"
+                        class="absolute inset-0 w-full h-full appearance-none bg-transparent cursor-col-resize z-20 slider-input"
+                        oninput="moveSlider(this)">
+
+                    <span
+                        class="absolute bottom-4 left-4 bg-escuro/70 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none border border-white/10">Antes</span>
+                    <span
+                        class="absolute bottom-4 right-4 bg-primaria/90 px-3 py-1 text-[10px] rounded-md font-bold uppercase tracking-widest pointer-events-none">Depois</span>
+                </div>
+                <h4 class="text-lg font-title text-primaria">Prótese Sobre Implantes</h4>
+                <p class="text-white text-sm leading-relaxed">A união perfeita entre engenharia e estética para
+                    restaurar a função com estabilidade absoluta e naturalidade.
+                </p>
+            </div>
+
+        </div>
         </div>
     </section>
+
 
     <style>
         .slider-input::-webkit-slider-thumb {
@@ -636,7 +679,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="text-center mb-20">
-                <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 italic">Sua Experiência</h2>
+                <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 ">Sua Experiência</h2>
                 <h3 class="text-4xl md:text-5xl font-title text-escuro leading-tight">A jornada para o seu <br><span
                         class="text-primaria italic">novo sorriso</span></h3>
             </div>
@@ -900,17 +943,16 @@
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 shadow-2xl z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-6">
                                         <div class="w-12 h-[1px] bg-primaria"></div>
-                                        <h4 class="text-xl md:text-2xl font-title text-white">Sobre a Dra. Roberta</h4>
-                                        <p class="text-platina/70 text-sm leading-relaxed font-body whitespace-normal">
-                                            Especialista em reabilitação oral e design do sorriso, com foco em
-                                            tecnologias digitais 3D e estética avançada.
+                                        <p class="text-white text-sm leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental, sempre respeitando a história e a individualidade de cada
+                                            paciente.
+
+                                            Sou mãe de um menino, casada e católica, e levo esses valores para cada
+                                            atendimento, oferecendo um cuidado humano, ético e verdadeiro.
                                         </p>
-                                        <ul
-                                            class="text-[10px] text-primaria uppercase tracking-widest font-bold space-y-2">
-                                            <li>• Reabilitação Oral</li>
-                                            <li>• Lentes de Contato</li>
-                                            <li>• Implantes</li>
-                                        </ul>
+
                                         <div class="w-12 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -947,17 +989,11 @@
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 shadow-2xl z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-6">
                                         <div class="w-12 h-[1px] bg-primaria"></div>
-                                        <h4 class="text-xl md:text-2xl font-title text-white">Sobre a Dra. Fabianny</h4>
-                                        <p class="text-platina/70 text-sm leading-relaxed font-body whitespace-normal">
+                                        <p class="text-white text-sm leading-relaxed font-body whitespace-normal">
                                             Referência em odontologia humanizada, focada em proporcionar uma experiência
                                             positiva e acolhedora para crianças.
                                         </p>
-                                        <ul
-                                            class="text-[10px] text-primaria uppercase tracking-widest font-bold space-y-2">
-                                            <li>• Odontopediatria</li>
-                                            <li>• Prevenção</li>
-                                            <li>• Ortodontia</li>
-                                        </ul>
+
                                         <div class="w-12 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -993,10 +1029,11 @@
                 </style>
             </section>
 
+            <!--Equipe completa-->
             <section id="equipe-completa" class="pt-2 pb-[20px] bg-escuro">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mx-auto">
 
                         <div class="group team-container relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
                             onclick="this.classList.toggle('flipped')">
@@ -1021,9 +1058,11 @@
                                 <div
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
-                                        <h4 class="text-lg font-title text-white">Especialidade</h4>
-                                        <p class="text-platina/70 text-xs leading-relaxed font-body whitespace-normal">
-                                            Descrição breve da atuação do profissional neste card.</p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1053,9 +1092,11 @@
                                 <div
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
-                                        <h4 class="text-lg font-title text-white">Especialidade</h4>
-                                        <p class="text-platina/70 text-xs leading-relaxed font-body whitespace-normal">
-                                            Descrição breve da atuação do profissional neste card.</p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1085,9 +1126,11 @@
                                 <div
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
-                                        <h4 class="text-lg font-title text-white">Especialidade</h4>
-                                        <p class="text-platina/70 text-xs leading-relaxed font-body whitespace-normal">
-                                            Descrição breve da atuação do profissional neste card.</p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1101,13 +1144,13 @@
                                 <div class="absolute inset-0 [backface-visibility:hidden] z-20">
                                     <div
                                         class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dra. Fabianny Marques.webp" alt="Dra. Fabianny Marques"
+                                        <img src="img/Dra Bárbara.webp" alt="Dra. Fabianny Marques"
                                             class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
                                         </div>
                                         <div class="absolute bottom-6 left-0 w-full text-center px-4">
-                                            <h4 class="text-xl font-title text-white">Dra. Fabianny M.</h4>
+                                            <h4 class="text-xl font-title text-white">Dra. Bárbara</h4>
                                             <p
                                                 class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
                                                 Ortodontia</p>
@@ -1117,9 +1160,45 @@
                                 <div
                                     class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
-                                        <h4 class="text-lg font-title text-white">Especialidade</h4>
-                                        <p class="text-platina/70 text-xs leading-relaxed font-body whitespace-normal">
-                                            Descrição breve da atuação do profissional neste card.</p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental.</p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group team-container relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                            onclick="this.classList.toggle('flipped')">
+                            <div
+                                class="team-card-inner relative h-full w-full transition-all duration-700 [transform-style:preserve-3d]">
+                                <div class="absolute inset-0 [backface-visibility:hidden] z-20">
+                                    <div
+                                        class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
+                                        <img src="img/Dra Bárbara.webp" alt="Dra. Fabianny Marques"
+                                            class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-6 left-0 w-full text-center px-4">
+                                            <h4 class="text-xl font-title text-white">Dra. Bárbara</h4>
+                                            <p
+                                                class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
+                                                Ortodontia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
+                                    <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
+                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
+                                            estética dental.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1446,7 +1525,7 @@
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!3m2!1spt-BR!2sbr!4v1777402561784!5m2!1spt-BR!2sbr!6m8!1m7!1sGMy4gxNCKbZmqgkuQjcNxQ!2m2!1d-19.88579863305627!2d-44.01236372997447!3f53.25885391805872!4f-8.094369691933295!5f0.7820865974627469"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade" title="Mapa da Clínica Tratare"></iframe>
                         <a href="#" target="_blank"
                             class="absolute top-3 left-3 bg-white text-black px-3 py-1.5 rounded shadow-lg text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-primaria hover:text-white transition-all">
                             Abrir no Maps <i data-lucide="external-link" class="w-3 h-3"></i>
