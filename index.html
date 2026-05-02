@@ -20,7 +20,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primaria: '#C5A059',
+                        primaria: '#b38f4d',
                         platina: '#E5E4E2',
                         bege: '#D1C7B7',
                         escuro: '#121212',
@@ -124,43 +124,129 @@
 <body>
 
     <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-platina">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+        <!-- Navbar Tratare -->
+        <nav id="navbar" class="bg-white shadow-sm fixed w-full z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-24 md:h-28">
 
-                <div class="flex-shrink-0 flex items-center">
-                    <img src="img/Logo topo.svg" alt="Tratare" class="h-16 md:h-24 w-auto object-contain">
+                    <!-- Logo (Aumentada no mobile) -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="img/Logo topo.svg" alt="Tratare" class="h-17 md:h-26 w-auto object-contain">
+                    </div>
+
+                    <!-- Menu Desktop -->
+                    <div class="hidden md:flex space-x-10">
+                        <a href="#servicos"
+                            class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Serviços</a>
+                        <a href="#resultados"
+                            class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Resultados</a>
+                        <a href="#sobre"
+                            class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Sobre</a>
+                        <a href="#equipe"
+                            class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Equipe</a>
+                    </div>
+
+                    <!-- Ações: Botão e Menu Mobile -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Botão de Agendamento (Mantido o tamanho aprovado) -->
+                        <a href="https://wa.me/5531998278042" target="_blank"
+                            class="bg-primaria text-white px-4 py-2 md:px-7 md:py-3 rounded-lg font-bold text-[10px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-[#b38f4d] transition-all duration-300 shadow-md">
+                            Agendar <span class="hidden md:inline">Consulta</span>
+                        </a>
+
+                        <!-- Botão Hambúrguer Moderno e Dourado -->
+                        <button id="mobile-menu-button"
+                            class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none group">
+                            <!-- Linhas do Hambúrguer -->
+                            <span class="line-1 w-7 h-0.5 bg-primaria rounded-full transition-all duration-300"></span>
+                            <span class="line-2 w-7 h-0.5 bg-primaria rounded-full transition-all duration-300"></span>
+                            <span class="line-3 w-7 h-0.5 bg-primaria rounded-full transition-all duration-300"></span>
+                        </button>
+                    </div>
                 </div>
-
-                <nav class="hidden md:flex space-x-10">
-                    <a href="#servicos"
-                        class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Serviços</a>
-                    <a href="#resultados"
-                        class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Resultados</a>
-                    <a href="#sobre"
-                        class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Sobre</a>
-                    <a href="#equipe"
-                        class="text-escuro hover:text-primaria transition-colors duration-300 font-medium text-sm uppercase tracking-[0.3em]">Equipe</a>
-                </nav>
-
-                <div class="flex items-center">
-                    <a href="https://wa.me/seunumeroaqui" target="_blank"
-                        class="bg-primaria text-white px-7 py-3 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#b38f4d] transition-all duration-300 shadow-md">
-                        Agendar Consulta
-                    </a>
-                </div>
-
-                <div class="md:hidden flex items-center">
-                    <button class="text-escuro p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-
             </div>
-        </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 overflow-hidden">
+                <div class="px-6 py-8 space-y-6 text-center">
+                    <a href="#servicos"
+                        class="mobile-link block text-escuro text-sm font-medium uppercase tracking-widest opacity-0">Serviços</a>
+                    <a href="#resultados"
+                        class="mobile-link block text-escuro text-sm font-medium uppercase tracking-widest opacity-0">Resultados</a>
+                    <a href="#sobre"
+                        class="mobile-link block text-escuro text-sm font-medium uppercase tracking-widest opacity-0">Sobre</a>
+                    <a href="#equipe"
+                        class="mobile-link block text-escuro text-sm font-medium uppercase tracking-widest opacity-0">Equipe</a>
+                </div>
+            </div>
+
+            <style>
+                /* Estilos para a animação do Hambúrguer */
+                #mobile-menu-button.active .line-1 {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                #mobile-menu-button.active .line-2 {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+
+                #mobile-menu-button.active .line-3 {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+
+                /* Animação suave para os links do menu aparecerem */
+                .mobile-link.show {
+                    animation: slideIn 0.4s ease forwards;
+                }
+
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            </style>
+
+            <script>
+                const menuBtn = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileLinks = document.querySelectorAll('.mobile-link');
+
+                menuBtn.addEventListener('click', () => {
+                    // Alterna o ícone para X
+                    menuBtn.classList.toggle('active');
+
+                    // Abre/Fecha o menu
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+
+                    // Anima os links um por um
+                    if (!isHidden) {
+                        mobileLinks.forEach((link, index) => {
+                            setTimeout(() => {
+                                link.classList.add('show');
+                            }, index * 100);
+                        });
+                    } else {
+                        mobileLinks.forEach(link => link.classList.remove('show'));
+                    }
+                });
+
+                // Fecha ao clicar em qualquer link
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuBtn.classList.remove('active');
+                        mobileMenu.classList.add('hidden');
+                        mobileLinks.forEach(l => l.classList.remove('show'));
+                    });
+                });
+            </script>
+        </nav>
     </header>
 
     <!-- Primeiro bloco hero -->
@@ -178,7 +264,7 @@
 
             <div class="absolute inset-0 bg-gradient-to-r from-escuro via-escuro/60 to-transparent z-0"></div>
 
-            <div class="max-w-7xl mx-auto w-full px-6 lg:px-8 z-10 relative">
+            <div class="max-w-7xl mx-auto w-full px-6 pt-[150px] lg:px-8 lg:pt-[150px] z-10 relative">
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
 
@@ -204,7 +290,7 @@
                         </div>
 
                         <div class="pt-2">
-                            <a href="#agendar"
+                            <a href="https://api.whatsapp.com/send/?phone=5531998278042&text=Ol%C3%A1%21+Vim+do+seu+site...&type=phone_number&app_absent=0"
                                 class="inline-block bg-primaria text-white px-8 py-3 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#b38f4d] transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                                 Agendar minha avaliação
                             </a>
@@ -927,7 +1013,7 @@
                                 <div class="absolute inset-0 [backface-visibility:hidden] z-20">
                                     <div
                                         class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dr. Roberta Neder.webp" alt="Dra. Roberta Neder"
+                                        <img src="img/Dra. Roberta Neder.webp" alt="Dra. Roberta Neder"
                                             class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
 
                                         <div
@@ -995,8 +1081,11 @@
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-6">
                                         <div class="w-12 h-[1px] bg-primaria"></div>
                                         <p class="text-white text-sm leading-relaxed font-body whitespace-normal">
-                                            Referência em odontologia humanizada, focada em proporcionar uma experiência
-                                            positiva e acolhedora para crianças.
+                                            Formada pela PUC Minas, atua na Tratare unindo a precisão técnica da Prótese
+                                            e Oclusão aos avanços da Laserterapia. Especialista em oferecer um cuidado
+                                            completo, associa a doçura necessária ao atendimento infantil à excelência
+                                            técnica exigida na vida adulta. Sua missão é garantir sorrisos funcionais e
+                                            saudáveis através de um olhar carinhoso, ético e altamente capacitado.
                                         </p>
 
                                         <div class="w-12 h-[1px] bg-primaria"></div>
@@ -1047,16 +1136,16 @@
                                 <div class="absolute inset-0 [backface-visibility:hidden] z-20">
                                     <div
                                         class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dr. Roberta Neder.webp" alt="Dra. Roberta Neder"
+                                        <img src="img/Dra Danyelle.webp" alt="Dra. Danyelle"
                                             class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
                                         </div>
                                         <div class="absolute bottom-6 left-0 w-full text-center px-4">
-                                            <h4 class="text-xl font-title text-white">Dra. Roberta Neder</h4>
+                                            <h4 class="text-xl font-title text-white">Dra. Danyelle</h4>
                                             <p
                                                 class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
-                                                Implantodontia</p>
+                                                Periodontia e Implante</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1065,9 +1154,9 @@
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                         <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
-                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
-                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
-                                            estética dental.</p>
+                                            Mestranda pela UFMG. Oferece tratamentos modernos baseados na ciência, com
+                                            foco em ética e excelência. Prioriza o atendimento humanizado, garantindo
+                                            confiança e o cuidado único que cada paciente merece.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1081,16 +1170,16 @@
                                 <div class="absolute inset-0 [backface-visibility:hidden] z-20">
                                     <div
                                         class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dra. Fabianny Marques.webp" alt="Dra. Fabianny Marques"
+                                        <img src="img/Dra Gabriela.webp" alt="Dra. Gabriela"
                                             class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
                                         </div>
                                         <div class="absolute bottom-6 left-0 w-full text-center px-4">
-                                            <h4 class="text-xl font-title text-white">Dra. Fabianny M.</h4>
+                                            <h4 class="text-xl font-title text-white">Dra. Gabriela</h4>
                                             <p
                                                 class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
-                                                Odontopediatria</p>
+                                                Endodontia</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1099,9 +1188,10 @@
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                         <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
-                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
-                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
-                                            estética dental.</p>
+                                            Formada pela UFMG e especialista em Endodontia, foca em diagnósticos
+                                            precisos e tratamentos de canal modernos para preservar o dente natural,
+                                            unindo tecnologia e atendimento humanizado seguro.
+                                        </p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1115,16 +1205,16 @@
                                 <div class="absolute inset-0 [backface-visibility:hidden] z-20">
                                     <div
                                         class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dr. Roberta Neder.webp" alt="Dra. Roberta Neder"
+                                        <img src="img/Dra Laura Rabelo.webp" alt="Dra. Laura Rabelo"
                                             class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
                                         </div>
                                         <div class="absolute bottom-6 left-0 w-full text-center px-4">
-                                            <h4 class="text-xl font-title text-white">Dra. Roberta Neder</h4>
+                                            <h4 class="text-xl font-title text-white">Dra. Laura Rabelo</h4>
                                             <p
                                                 class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
-                                                Estética Dental</p>
+                                                Ortodontia e Harmonização</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1133,43 +1223,10 @@
                                     <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                         <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
-                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
-                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
-                                            estética dental.</p>
-                                        <div class="w-8 h-[1px] bg-primaria"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="group team-container relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
-                            onclick="this.classList.toggle('flipped')">
-                            <div
-                                class="team-card-inner relative h-full w-full transition-all duration-700 [transform-style:preserve-3d]">
-                                <div class="absolute inset-0 [backface-visibility:hidden] z-20">
-                                    <div
-                                        class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
-                                        <img src="img/Dra Bárbara.webp" alt="Dra. Fabianny Marques"
-                                            class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
-                                        <div
-                                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
-                                        </div>
-                                        <div class="absolute bottom-6 left-0 w-full text-center px-4">
-                                            <h4 class="text-xl font-title text-white">Dra. Bárbara</h4>
-                                            <p
-                                                class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
-                                                Ortodontia</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
-                                    <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
-                                        <div class="w-8 h-[1px] bg-primaria"></div>
-                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
-                                            Sou cirurgiã-dentista protesista, apaixonada por cuidar de sorrisos com
-                                            técnica, sensibilidade e propósito. Atuo com prótese sobre implantes e
-                                            estética dental.</p>
+                                            Formada pela PUC Minas. Valoriza a história de cada paciente para
+                                            transformar sorrisos de forma única. Sua motivação é unir técnica e
+                                            sensibilidade, promovendo saúde e autoestima através de um cuidado
+                                            especializado.</p>
                                         <div class="w-8 h-[1px] bg-primaria"></div>
                                     </div>
                                 </div>
@@ -1209,6 +1266,45 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="group team-container relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                            onclick="this.classList.toggle('flipped')">
+                            <div
+                                class="team-card-inner relative h-full w-full transition-all duration-700 [transform-style:preserve-3d]">
+                                <div class="absolute inset-0 [backface-visibility:hidden] z-20">
+                                    <div
+                                        class="relative h-full w-full overflow-hidden rounded-xl border border-white/5">
+                                        <img src="img/Dra. Emiliane.webp" alt="Dra. Roberta Neder"
+                                            class="h-full w-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-6 left-0 w-full text-center px-4">
+                                            <h4 class="text-xl font-title text-white">Dra. Emiliane</h4>
+                                            <p
+                                                class="text-primaria font-body text-[9px] font-bold uppercase tracking-[0.2em]">
+                                                Ortodontia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 h-full w-full rounded-xl bg-[#1a1a1a] p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] border border-primaria/20 z-10">
+                                    <div class="flex flex-col h-full justify-center items-center text-center space-y-4">
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                        <p class="text-white text-xs leading-relaxed font-body whitespace-normal">
+                                            Graduada pela UFMG e especialista em Ortodontia pelo IES, atua com foco em
+                                            atendimento humanizado e individualizado, unindo evidências científicas e
+                                            segurança em cada etapa para garantir resultados e bem-estar dos pacientes.
+                                        </p>
+                                        <div class="w-8 h-[1px] bg-primaria"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
 
                     </div>
                 </div>
