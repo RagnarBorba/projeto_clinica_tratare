@@ -258,7 +258,7 @@
 
                 <source media="(min-width: 768px)" srcset="img/teste background.png">
 
-                <img src="img/teste background.png" class="absolute inset-0 w-full h-full object-cover"
+                <img src="img/background.webp" class="absolute inset-0 w-full h-full object-cover"
                     alt="Clínica Tratare">
             </picture>
 
@@ -266,24 +266,35 @@
 
             <div class="max-w-7xl mx-auto w-full px-6 pt-[150px] lg:px-8 lg:pt-[150px] z-10 relative">
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+                <!-- 
+  ALTERAÇÕES REALIZADAS:
+  1. Grid Principal: Alterado de max-w-6xl para lg:max-w-7xl para permitir mais largura no desktop.
+  2. Bloco de Texto: Adicionado lg:max-w-2xl para que o texto ocupe mais espaço horizontal em telas grandes.
+  3. Título (H1): Aumentado para lg:text-6xl para acompanhar a nova escala do bloco.
+  4. Imagem: Contentor aumentado para lg:max-w-xl para ficar proporcional ao texto.
+-->
 
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl lg:max-w-7xl mx-auto">
+
+                    <!-- Bloco de Texto Ampliado no Desktop -->
                     <div
-                        class="space-y-6 text-center lg:text-left flex flex-col justify-center max-w-lg mx-auto lg:mx-0 lg:ml-auto">
+                        class="space-y-6 text-center lg:text-left flex flex-col justify-center max-w-lg lg:max-w-2xl mx-auto lg:mx-0 lg:ml-auto">
                         <div class="space-y-3">
                             <h2
                                 class="text-primaria uppercase tracking-[0.4em] text-[10px] md:text-xs font-bold opacity-80 animate-fade-in">
                                 Bem-vindo à Clínica Tratare
                             </h2>
 
-                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-title text-white leading-tight">
+                            <!-- Aumentamos o text-5xl para 6xl no desktop -->
+                            <h1 class="text-3xl md:text-4xl lg:text-6xl font-title text-white leading-tight">
                                 Transforme seu <br>
                                 <span class="italic">sorriso</span>, eleve sua <span
                                     class="text-primaria">confiança.</span>
                             </h1>
 
                             <p
-                                class="text-platina text-sm md:text-base max-w-md font-body leading-relaxed mx-auto lg:mx-0 opacity-80">
+                                class="text-white text-sm md:text-base lg:text-lg max-w-md lg:max-w-xl font-body leading-relaxed mx-auto lg:mx-0 opacity-80">
                                 Odontologia de alta precisão com atendimento humanizado e tecnologias de última geração
                                 para o seu bem-estar.
                             </p>
@@ -297,9 +308,10 @@
                         </div>
                     </div>
 
-                    <div class="relative w-full max-w-lg mx-auto lg:mr-auto group">
-                        <div class="relative aspect-[4/5] overflow-hidden rounded-xl ">
-                            <img src="img/teste2.png"
+                    <!-- Imagem Ampliada no Desktop -->
+                    <div class="relative w-full max-w-lg lg:max-w-xl mx-auto lg:mr-auto group">
+                        <div class="relative aspect-[4/5] overflow-hidden rounded-xl">
+                            <img src="img/Dra Roberta.webp"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 alt="Dra. Clínica Tratare">
                         </div>
@@ -348,7 +360,7 @@
 
     <!-- Especialidades -->
     <section id="servicos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
 
@@ -370,7 +382,7 @@
                     <div
                         class="rounded-lg group p-8 border border-platina bg-white hover:bg-escuro transition-all duration-500">
                         <div class="text-primaria mb-6 transition-transform duration-500 group-hover:scale-110">
-                            <i data-lucide="sparkles" class="w-10 h-10"></i>
+                            <img src="img/ico/Implantodontia.svg" alt="Ícone Implantodontia" class="w-10 h-10">
                         </div>
                         <h4
                             class="text-xl font-title font-bold text-escuro group-hover:text-white mb-4 transition-colors">
@@ -386,7 +398,8 @@
                     <div
                         class="rounded-lg group p-8 border border-platina bg-white hover:bg-escuro transition-all duration-500">
                         <div class="text-primaria mb-6 transition-transform duration-500 group-hover:scale-110">
-                            <i data-lucide="shield-check" class="w-10 h-10"></i>
+                            <img src="img/ico/Protese sobre implante.svg" alt="Ícone Próteses sobre Implante"
+                                class="w-10 h-10">
                         </div>
                         <h4
                             class="text-xl font-title font-bold text-escuro group-hover:text-white mb-4 transition-colors">
@@ -402,7 +415,8 @@
                     <div
                         class="rounded-lg group p-8 border border-platina bg-white hover:bg-escuro transition-all duration-500">
                         <div class="text-primaria mb-6 transition-transform duration-500 group-hover:scale-110">
-                            <i data-lucide="smile" class="w-10 h-10"></i>
+                            <img src="img/ico/Lentes de contato.svg" alt="Ícone Lentes de Contato Dental"
+                                class="w-10 h-10">
                         </div>
                         <h4
                             class="text-xl font-title font-bold text-escuro group-hover:text-white mb-4 transition-colors">
@@ -418,7 +432,9 @@
                     <div
                         class="rounded-lg group p-8 border border-platina bg-white hover:bg-escuro transition-all duration-500">
                         <div class="text-primaria mb-6 transition-transform duration-500 group-hover:scale-110">
-                            <i data-lucide="Activity" class="w-10 h-10"></i>
+                            <img src="img/ico/Invisaling.svg"
+                                alt="Ícone representando alinhadores invisíveis da Invisalign para ortodontia discreta"
+                                class="w-10 h-10">
                         </div>
                         <h4
                             class="text-xl font-title font-bold text-escuro group-hover:text-white mb-4 transition-colors">
@@ -446,7 +462,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 animate-fade-in">
                     Transformações Reais</h2>
-                <h3 class="text-4xl md:text-5xl font-title leading-tight">A arte de recriar <br><span
+                <h3 class="text-4xl md:text-5xl font-title leading-none">A arte de<br> recriar <span
                         class="text-primaria italic">sorrisos memoráveis</span></h3>
             </div>
 
@@ -771,11 +787,11 @@
 
             <div class="text-center mb-20">
                 <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4 ">Sua Experiência</h2>
-                <h3 class="text-4xl md:text-5xl font-title text-escuro leading-tight">A jornada para o seu <br><span
+                <h3 class="text-4xl md:text-5xl font-title text-escuro leading-none">A jornada para o seu <span
                         class="text-primaria italic">novo sorriso</span></h3>
             </div>
 
-            <div class="relative">
+            <div class="relative px-6">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
 
@@ -851,8 +867,8 @@
                     class="bg-black border border-primaria/30 p-10 md:p-16 rounded-[2rem] text-center shadow-2xl backdrop-blur-md">
 
 
-                    <h3 class="text-3xl md:text-5xl font-title text-white leading-tight mb-8">
-                        Cada sorriso é único, <br>
+                    <h3 class="text-3xl md:text-5xl font-title text-white leading-none mb-8">
+                        Cada sorriso é único,
                         <span class="text-primaria italic">e o seu tratamento
                         </span> também
                         será.
@@ -880,7 +896,7 @@
      Corrigir o movimento do carrocel que esta estatico. -->
 
 
-    <section id="sobre" class="py-20 bg-white overflow-hidden">
+    <section id="sobre" class="pt-[2px] pb-20 md: pt-8 pb-20  bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -925,7 +941,7 @@
 
                 <div class="space-y-8 order-1 lg:order-2">
                     <div class="space-y-4">
-                        <h2 class="text-primaria uppercase tracking-[0.4em] text-[10px] md:text-xs font-bold italic">
+                        <h2 class="text-primaria uppercase tracking-[0.4em] text-[10px] md:text-xs font-bold ">
                             A Experiência Tratare
                         </h2>
                         <h3 class="text-3xl md:text-5xl font-title text-escuro leading-tight">
@@ -1354,10 +1370,12 @@
     <section id="reviews" class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="flex flex-col items-center justify-center text-center mb-16 gap-6 
+            md:flex-row md:justify-between md:items-end md:text-left">
                 <div class="max-w-2xl">
                     <h2 class="text-primaria uppercase tracking-[0.3em] text-sm font-bold mb-4">Depoimentos</h2>
-                    <h3 class="text-4xl font-title text-escuro leading-tight">O que nossos pacientes <br>
+                    <h3 class="text-4xl font-title text-escuro leading-none md:leading-tight">O que nossos pacientes
+                        <br>
                         <span class="text-primaria italic">dizem no Google</span>
                     </h3>
                 </div>
@@ -1550,7 +1568,7 @@
                     Sua Nova Vida Começa Aqui
                 </h2>
 
-                <h3 class="text-3xl md:text-5xl font-title text-white leading-tight mb-8">
+                <h3 class="text-3xl md:text-5xl font-title text-white leading-none mb-8">
                     Pronto para descobrir o <br>
                     <span class="text-primaria italic">poder</span> do seu sorriso?
                 </h3>
@@ -1579,7 +1597,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
 
                 <div class="lg:col-span-3 flex flex-col items-center justify-center space-y-4 text-center">
-                    <img src="img/Logo Rodapé dourada.svg" alt="Tratare" class="h-20 md:h-40 w-auto object-contain">
+                    <img src="img/Logo Rodapé dourada.svg" alt="Tratare"
+                        class="h-[180px] md:h-40 w-auto object-contain">
 
                 </div>
 
@@ -1589,7 +1608,7 @@
                         <p class="text-[10px]  uppercase tracking-widest italic">CRO: MG45784</p>
                     </div>
 
-                    <div class="space-y-4">
+                    <div class="space-y-2">
 
                         <a href="https://wa.me/5531998278042?text=Ol%C3%A1!%20Vim%20do%20seu%20site..." target="_blank"
                             class="flex items-center justify-center lg:justify-start gap-3 text-sm hover:text-primaria transition-colors">
